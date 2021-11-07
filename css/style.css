@@ -283,6 +283,9 @@ section.footer .footer-nav ul,
         display: flex;
         align-items: center;
     }
+    .footer .footer-left {
+        margin-bottom: 0;
+    }
     .footer-left h3 {
         font-size: 2rem;
     }
