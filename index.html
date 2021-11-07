@@ -8,32 +8,53 @@
     <title>Eamcreative</title>
     <link rel="icon" type="image/ico" href="./image/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/4a3e617da4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="navbar">
         <a href="#" class="logo"><span>EAM</span>creative</a>
-        <i id="mobile-button-open" class="fas fa-bars"></i>
-        <nav>
-            <ul class="primary-nav">
-                <i class="fas fa-times"></i>
+        <span id="mobile-button-open">
+            <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
+                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </span>
+        <nav id="desktop-nav">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Contact</a></li>
                 <li><a href="#">Watch</a></li>
             </ul>
-            <ul class="secondary-nav">
+            <ul>
                 <li class=""><a href="#">Create Event</a></li>
             </ul>
+        </nav>
+        <nav id="mobile-nav">
+            <span id="mobile-button-exit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="none"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </span>
+            <ul class="mobile-nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Watch</a></li>
+            </ul>
+
         </nav>
     </div>
     <section class="hero">
         <h2>CONVENIENT AND HUSTLE FREE</h2>
         <h1>Hosting An Event Just Got Easy.</h1>
         <div class="hero-buttons">
-            <a href="#"><i class="far fa-edit"></i>Create</a>
-            <a href="#"><i class="far fa-eye"></i>Watch</a>
+            <a href="#">Create</a>
+            <a href="#">Watch</a>
         </div>
     </section>
     <section class="footer">
@@ -44,11 +65,21 @@
         <div class="fotter-right">
             <div class="footer-logo">
                 <ul>
-                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fab fa-google"></i></a></li>
-                    <li><a href="#"><i class="fab fa-github"></i></a></li>
-                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
+                    <li>
+                        <a href="#"></a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-nav">
@@ -64,7 +95,17 @@
     </section>
 
     <script>
-        const mobileButtonOpen = document.getElementById('mobile-button-open');
+        const mobileBtnOpen = document.getElementById('mobile-button-open')
+        mobileNav = document.getElementById('mobile-nav')
+        mobileBtnExit = document.getElementById('mobile-button-exit');
+
+        mobileBtnOpen.addEventListener('click', () => {
+            mobileNav.style.width = "100%";
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            mobileNav.style.width = "0%";
+        })
     </script>
 </body>
 
